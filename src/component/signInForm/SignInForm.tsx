@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
+
+import { AuthError, AuthErrorCodes } from "firebase/auth";
 
 import FormInput from "../formInput";
 import Button from "../button";
@@ -28,31 +30,27 @@ const SignInForm = () => {
 		dispatch(googleSignInStart());
 	};
 
-	const handleSubmit = async (e) => {
+	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		try {
 			dispatch(emailSignInStart(email, password));
 			resetFormFields();
 		} catch (error) {
-			switch (error.code) {
-				case "auth/wrong-password":
+			switch ((error as AuthError).code) {
+				case AuthErrorCodes.INVALID_PASSWORD:
 					alert("incorrect password for this email");
 					break;
-				case "auth/user-not-found":
+				case AuthErrorCodes.NULL_USER:
 					alert("no user associated with this email");
 					break;
 				default:
 					console.log(error);
 			}
-
-			if (error.code === "auth/wrong-password") {
-				alert("incorrect password for this email");
-			}
 		}
 	};
 
-	const handleChange = (e) => {
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
 
 		setFormFields({
@@ -65,7 +63,7 @@ const SignInForm = () => {
 		<SignInContainer>
 			<h2>Already have an account?</h2>
 			<span>Sign in with your email and password</span>
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={(e) => handleSubmit}>
 				<FormInput label='Email' type='email' required onChange={handleChange} name='email' value={email} />
 				<FormInput label='Password' type='password' required onChange={handleChange} name='password' value={password} />
 				<ButtonsContainer>
