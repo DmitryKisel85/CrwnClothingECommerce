@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { media } from "../../media.styles";
 import { BaseButton, GoogleSignInButton, InvertedButton } from "../button/button.styles";
 
 export const CartDropdownContainer = styled.div`
 	position: absolute;
-	width: 240px;
+	width: 260px;
 	height: 340px;
 	display: flex;
 	flex-direction: column;
@@ -19,6 +20,15 @@ export const CartDropdownContainer = styled.div`
 	${InvertedButton} {
 		margin-top: auto;
 	}
+
+	@media ${media.tabletS} {
+		right: 17.5px;
+	}
+
+	@media ${media.mobileM} {
+		width: 285px;
+		height: 500px;
+	}
 `;
 
 export const EmptyMessage = styled.span`
@@ -30,5 +40,9 @@ export const CartItems = styled.div`
 	height: 240px;
 	display: flex;
 	flex-direction: column;
-	overflow: scroll;
+	overflow: auto;
+
+	@media ${media.mobileM} {
+		height: 500px;
+	}
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../media.styles";
 
 export const SignUpContainer = styled.div`
 	display: flex;
@@ -7,5 +8,9 @@ export const SignUpContainer = styled.div`
 
 	h2 {
 		margin: 10px 0;
+	}
+
+	@media ${media.mobileM} {
+		width: 300px;
 	}
 `;

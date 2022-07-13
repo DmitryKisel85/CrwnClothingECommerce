@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { media } from "../../media.styles";
 
 const subColor = "grey";
 const mainColor = "black";
@@ -53,5 +54,9 @@ export const Group = styled.div`
 
 	input[type="password"] {
 		letter-spacing: 0.3em;
+	}
+
+	@media ${media.mobileM} {
+		margin: 10px 0;
 	}
 `;

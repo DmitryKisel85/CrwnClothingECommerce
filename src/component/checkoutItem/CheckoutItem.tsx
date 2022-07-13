@@ -5,12 +5,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectCartItems } from "../../store/cart/cart.selector";
 import { addItemToCart, clearItemFromCart, removeItemFromCart } from "../../store/cart/cart.action";
 
-import { CartItem } from "../../store/cart/cart.types";
+import { CartItem as TCartItem } from "../../store/cart/cart.types";
 
 import { CheckoutItemContainer, ImageContainer, BaseSpan, Quantity, Arrow, Value, RemoveButton } from "./checkoutItem.styles";
 
 type CheckoutItemProps = {
-	cartItem: CartItem;
+	cartItem: TCartItem;
 };
 
 const CheckoutItem: FC<CheckoutItemProps> = memo(({ cartItem }) => {
@@ -35,7 +35,7 @@ const CheckoutItem: FC<CheckoutItemProps> = memo(({ cartItem }) => {
 				<Value>{quantity}</Value>
 				<Arrow onClick={addItemHandler}>&#10095;</Arrow>
 			</Quantity>
-			<BaseSpan>{price}</BaseSpan>
+			<BaseSpan>${price}</BaseSpan>
 			<RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
 		</CheckoutItemContainer>
 	);

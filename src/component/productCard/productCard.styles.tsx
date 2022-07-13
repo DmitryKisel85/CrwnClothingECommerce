@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../media.styles";
 
 export const ProductCardContainer = styled.div`
 	width: 100%;
@@ -33,6 +34,14 @@ export const ProductCardContainer = styled.div`
 			display: flex;
 		}
 	}
+
+	@media ${media.mobileM} {
+		height: 275px;
+
+		button {
+			top: 180px;
+		}
+	}
 `;
 
 export const Footer = styled.div`
@@ -48,6 +57,4 @@ export const Name = styled.span`
 	margin-bottom: 15px;
 `;
 
-export const Price = styled.span`
-	width: 10%;
-`;
+export const Price = styled.span``;

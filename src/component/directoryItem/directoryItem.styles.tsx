@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-export const BackgroundImage = styled.div`
+import { media } from "../../media.styles";
+
+type BackgroundImageProps = {
+	imageUrl: string;
+};
+
+export const BackgroundImage = styled.div<BackgroundImageProps>`
 	width: 100%;
 	height: 100%;
 	background-size: cover;
@@ -64,5 +70,10 @@ export const DirectoryItemContainer = styled.div`
 		${Body} {
 			opacity: 0.9;
 		}
+	}
+
+	@media ${media.mobileL} {
+		min-width: 40%;
+		height: 200px;
 	}
 `;

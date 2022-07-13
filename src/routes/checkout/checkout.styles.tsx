@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../media.styles";
 
 export const CheckoutContainer = styled.div`
 	width: 55%;
@@ -7,6 +8,15 @@ export const CheckoutContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	margin: 50px auto 0;
+
+	@media ${media.tabletS} {
+		width: 85%;
+	}
+
+	@media ${media.mobileM} {
+		width: 95%;
+		font-size: 14px;
+	}
 `;
 
 export const CheckoutHeader = styled.div`
@@ -23,6 +33,14 @@ export const HeaderBlock = styled.div`
 
 	&:last-child {
 		width: 8%;
+	}
+
+	@media ${media.mobileL} {
+		width: 27%;
+
+		&:last-child {
+			width: 12%;
+		}
 	}
 `;
 
