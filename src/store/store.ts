@@ -1,13 +1,21 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer, PersistConfig } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import createSagaMiddleware from "redux-saga";
 
 import { rootSaga } from "./rootSaga";
 
-import { rootReducer } from "./rootReducer";
+import { userReducer } from "./user/user.reducer";
+import { categoriesReducer } from "./categories/category.reducer";
+import { cartReducer } from "./cart/cart.reducer";
 
 export type RootState = ReturnType<typeof rootReducer>;
+
+const rootReducer = combineReducers({
+	user: userReducer,
+	categories: categoriesReducer,
+	cart: cartReducer,
+});
 
 type ExtendedPersistedConfig = PersistConfig<RootState> & {
 	whitelist: (keyof RootState)[];
