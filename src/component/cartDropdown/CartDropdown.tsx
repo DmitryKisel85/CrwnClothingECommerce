@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { FC, useCallback } from "react";
 
 import { useSelector } from "react-redux";
 
@@ -11,12 +11,13 @@ import { selectCartItems } from "../../store/cart/cart.selector";
 
 import { CartDropdownContainer, CartItems, EmptyMessage } from "./cartDropdown.styles";
 
-const CartDropdown = () => {
+const CartDropdown: FC = () => {
 	const cartItems = useSelector(selectCartItems);
 	const navigate = useNavigate();
 
 	const goToCheckoutHandler = useCallback(() => {
 		navigate("/checkout");
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

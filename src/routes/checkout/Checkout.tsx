@@ -6,8 +6,9 @@ import CheckoutItem from "../../component/checkoutItem";
 import PaymentForm from "../../component/paymentForm";
 
 import { CheckoutContainer, CheckoutHeader, HeaderBlock, Total } from "./checkout.styles";
+import { FC } from "react";
 
-const Checkout = () => {
+const Checkout: FC = () => {
 	const cartItems = useSelector(selectCartItems);
 	const cartTotal = useSelector(selectCartTotal);
 

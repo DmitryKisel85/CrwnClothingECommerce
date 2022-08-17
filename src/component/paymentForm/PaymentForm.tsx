@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, FC } from "react";
 import { useSelector } from "react-redux";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
@@ -21,7 +21,7 @@ const cardStyle = {
 	},
 };
 
-const PaymentForm = () => {
+const PaymentForm: FC = () => {
 	const stripe = useStripe();
 	const elements = useElements();
 	const amount = useSelector(selectCartTotal);

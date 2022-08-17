@@ -1,4 +1,4 @@
-import { useState, FormEvent, ChangeEvent } from "react";
+import { useState, FormEvent, ChangeEvent, FC } from "react";
 import { useDispatch } from "react-redux";
 
 import { AuthError, AuthErrorCodes } from "firebase/auth";
@@ -16,7 +16,7 @@ const defaultFormFields = {
 	password: "",
 };
 
-const SignInForm = () => {
+const SignInForm: FC = () => {
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const { email, password } = formFields;
 

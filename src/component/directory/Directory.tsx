@@ -1,4 +1,4 @@
-import { Key } from "react";
+import { FC, Key } from "react";
 
 import DirectoryItem from "../directoryItem";
 
@@ -44,7 +44,7 @@ const categories: DirectoryCategory[] = [
 	},
 ];
 
-const Directory = () => {
+const Directory: FC = () => {
 	return (
 		<DirectoryContainer>
 			{categories.map((category) => {

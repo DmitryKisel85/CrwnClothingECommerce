@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Outlet } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -13,7 +14,7 @@ import { signOutStart } from "../../store/user/user.action";
 
 import { NavigationContainer, NavLinks, NavLink, LogoContainer } from "./navigation.styles";
 
-const Navigation = () => {
+const Navigation: FC = () => {
 	const currentUser = useSelector(selectCurrentUser);
 	const isCartOpen = useSelector(selectIsCartOpen);
 

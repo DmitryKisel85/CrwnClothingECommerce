@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { useSelector } from "react-redux";
 
 import { selectCategoriesMap, selectCategoriesIsLoading } from "../../store/categories/category.selector";
@@ -5,7 +6,7 @@ import { selectCategoriesMap, selectCategoriesIsLoading } from "../../store/cate
 import CategoryPreview from "../../component/categoryPreview";
 import Spinner from "../../component/spinner";
 
-const CategoriesPreview = () => {
+const CategoriesPreview: FC = () => {
 	const categoriesMap = useSelector(selectCategoriesMap);
 	const isLoading = useSelector(selectCategoriesIsLoading);
 

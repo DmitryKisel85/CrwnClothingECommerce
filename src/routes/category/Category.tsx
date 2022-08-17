@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -13,7 +13,7 @@ type CategoryRouteParams = {
 	category: string;
 };
 
-const Category = () => {
+const Category: FC = () => {
 	const { category } = useParams<keyof CategoryRouteParams>() as CategoryRouteParams;
 	const categoriesMap = useSelector(selectCategoriesMap);
 	const isLoading = useSelector(selectCategoriesIsLoading);
