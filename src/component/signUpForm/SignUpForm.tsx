@@ -2,7 +2,7 @@ import { useState, FormEvent, ChangeEvent, FC } from "react";
 
 import { AuthError, AuthErrorCodes } from "firebase/auth";
 
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../store/store";
 
 import FormInput from "../formInput";
 import Button from "../button";
@@ -22,7 +22,7 @@ const SignUpForm: FC = () => {
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const { displayName, email, password, confirmPassword } = formFields;
 
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	const resetFormFields = () => {
 		setFormFields(defaultFormFields);

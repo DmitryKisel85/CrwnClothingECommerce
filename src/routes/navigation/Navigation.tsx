@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Outlet } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { useAppDispatch } from "../../store/store";
 
 import CartIcon from "../../component/cartIcon";
 import CartDropdown from "../../component/cartDropdown";
@@ -18,7 +19,7 @@ const Navigation: FC = () => {
 	const currentUser = useSelector(selectCurrentUser);
 	const isCartOpen = useSelector(selectIsCartOpen);
 
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	const signOutUser = () => dispatch(signOutStart());
 

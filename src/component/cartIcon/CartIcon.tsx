@@ -1,5 +1,6 @@
 import { FC } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { useAppDispatch } from "../../store/store";
 
 import { selectCartCount, selectIsCartOpen } from "../../store/cart/cart.selector";
 import { setIsCartOpen } from "../../store/cart/cart.action";
@@ -9,7 +10,7 @@ import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 import { CartIconContainer, ItemCount } from "./cartIcon.styles";
 
 const CartIcon: FC = () => {
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	const cartCount = useSelector(selectCartCount);
 	const isCartOpen = useSelector(selectIsCartOpen);
