@@ -2,8 +2,8 @@ import { FC, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useAppDispatch } from "../../store/store";
 
-import CategoriesPreview from "../categoriesPreview";
-import Category from "../category";
+import CategoriesPreview from "../CategoriesPreview";
+import Category from "../Category";
 
 import { fetchCategoriesStart } from "../../store/categories/category.action";
 

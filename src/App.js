@@ -9,11 +9,11 @@ import { checkUserSession } from "./store/user/user.action";
 
 import { GlobalStyle } from "./global.styles";
 
-const Home = lazy(() => import("./routes/home"));
-const Authentication = lazy(() => import("./routes/authentication"));
-const Navigation = lazy(() => import("./routes/navigation"));
-const Shop = lazy(() => import("./routes/shop"));
-const Checkout = lazy(() => import("./routes/checkout"));
+const Home = lazy(() => import("./routes/Home"));
+const Authentication = lazy(() => import("./routes/Authentication"));
+const Navigation = lazy(() => import("./routes/Navigation"));
+const Shop = lazy(() => import("./routes/Shop"));
+const Checkout = lazy(() => import("./routes/Checkout"));
 
 const App = () => {
 	const dispatch = useAppDispatch();
