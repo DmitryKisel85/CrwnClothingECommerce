@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { media } from "../../media.styles";
-import Button from "../button";
+import Button from "../Button";
 
 export const PaymentFormContainer = styled.div`
 	height: 300px;

@@ -4,8 +4,8 @@ import { AuthError, AuthErrorCodes } from "firebase/auth";
 
 import { useAppDispatch } from "../../store/store";
 
-import FormInput from "../formInput";
-import Button from "../button";
+import FormInput from "../FormInput";
+import Button from "../Button";
 
 import { signUpStart } from "../../store/user/user.action";
 

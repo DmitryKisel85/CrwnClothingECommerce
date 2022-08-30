@@ -3,9 +3,9 @@ import { useAppDispatch } from "../../store/store";
 
 import { AuthError, AuthErrorCodes } from "firebase/auth";
 
-import FormInput from "../formInput";
-import Button from "../button";
-import { BUTTON_TYPES_CLASSES } from "../button/Button";
+import FormInput from "../FormInput";
+import Button from "../Button";
+import { BUTTON_TYPES_CLASSES } from "../Button/Button";
 
 import { googleSignInStart, emailSignInStart } from "../../store/user/user.action";
 

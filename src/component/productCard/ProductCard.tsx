@@ -6,8 +6,8 @@ import { useAppDispatch } from "../../store/store";
 import { selectCartItems } from "../../store/cart/cart.selector";
 import { addItemToCart } from "../../store/cart/cart.action";
 
-import Button from "../button";
-import { BUTTON_TYPES_CLASSES } from "../button/Button";
+import Button from "../Button";
+import { BUTTON_TYPES_CLASSES } from "../Button/Button";
 
 import { CategoryItem } from "../../store/categories/category.types";
 

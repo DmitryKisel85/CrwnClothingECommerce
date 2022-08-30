@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 
 import { selectCartItems, selectCartTotal } from "../../store/cart/cart.selector";
 
-import CheckoutItem from "../../component/checkoutItem";
-import PaymentForm from "../../component/paymentForm";
+import CheckoutItem from "../../component/CheckoutItem";
+import PaymentForm from "../../component/PaymentForm";
 
 import { CheckoutContainer, CheckoutHeader, HeaderBlock, Total } from "./checkout.styles";
 import { FC } from "react";

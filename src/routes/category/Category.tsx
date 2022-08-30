@@ -2,8 +2,8 @@ import { useState, useEffect, FC } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import ProductCard from "../../component/productCard";
-import Spinner from "../../component/spinner";
+import ProductCard from "../../component/ProductCard";
+import Spinner from "../../component/Spinner";
 
 import { selectCategoriesMap, selectCategoriesIsLoading } from "../../store/categories/category.selector";
 

@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { DirectoryCategory } from "../directory/Directory";
+import { DirectoryCategory } from "../Directory/Directory";
 import { DirectoryItemContainer, BackgroundImage, Body } from "./directoryItem.styles";
 
 type DirectoryItemProps = {

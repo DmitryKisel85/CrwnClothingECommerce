@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import SignUpForm from "../../component/signUpForm";
-import SignInForm from "../../component/signInForm";
+import SignUpForm from "../../component/SignUpForm";
+import SignInForm from "../../component/SignInForm";
 
 import { AuthenticationContainer } from "./authentication.styles";
 

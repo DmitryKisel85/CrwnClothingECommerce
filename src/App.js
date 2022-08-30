@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
 import { useAppDispatch } from "./store/store";
 
-import Spinner from "./component/spinner";
+import Spinner from "./component/Spinner";
 
 import { checkUserSession } from "./store/user/user.action";
 
