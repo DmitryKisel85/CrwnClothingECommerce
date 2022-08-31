@@ -2,8 +2,9 @@ import { FC } from "react";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../store/store";
 
-import { selectCartCount, selectIsCartOpen } from "../../store/cart/cart.selector";
-import { setIsCartOpen } from "../../store/cart/cart.action";
+import { selectCartCount, selectIsCartOpen } from "../../store/cart/cartSelector";
+// import { setIsCartOpen } from "../../store/cart/cart.action";
+import { setIsCartOpen } from "../../store/cart/cartSlice";
 
 import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 

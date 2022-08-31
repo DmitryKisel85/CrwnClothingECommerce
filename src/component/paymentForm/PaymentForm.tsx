@@ -2,7 +2,7 @@ import { useState, FormEvent, FC } from "react";
 import { useSelector } from "react-redux";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
-import { selectCartTotal } from "../../store/cart/cart.selector";
+import { selectCartTotal } from "../../store/cart/cartSelector";
 import { selectCurrentUser } from "../../store/user/user.selector";
 
 import { BUTTON_TYPES_CLASSES } from "../Button/Button";

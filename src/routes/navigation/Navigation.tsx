@@ -8,7 +8,7 @@ import CartDropdown from "../../component/CartDropdown";
 
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 
-import { selectIsCartOpen } from "../../store/cart/cart.selector";
+import { selectIsCartOpen } from "../../store/cart/cartSelector";
 import { selectCurrentUser } from "../../store/user/user.selector";
 
 import { signOutStart } from "../../store/user/user.action";

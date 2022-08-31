@@ -8,7 +8,8 @@ import { rootSaga } from "./rootSaga";
 
 import { userReducer } from "./user/user.reducer";
 import { categoriesReducer } from "./categories/category.reducer";
-import { cartReducer } from "./cart/cart.reducer";
+// import { cartReducer } from "./cart/cart.reducer";
+import cartReducer from "./cart/cartSlice";
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppDispatch = typeof store.dispatch;

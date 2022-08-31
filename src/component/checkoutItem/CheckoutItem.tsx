@@ -1,12 +1,10 @@
 import { FC, memo } from "react";
 
-import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../store/store";
 
-import { selectCartItems } from "../../store/cart/cart.selector";
-import { addItemToCart, clearItemFromCart, removeItemFromCart } from "../../store/cart/cart.action";
+import { addItemToCart, removeItemFromCart, clearItemFromCart } from "../../store/cart/cartSlice";
 
-import { CartItem as TCartItem } from "../../store/cart/cart.types";
+import { CartItem as TCartItem } from "../../store/cart/cartTypes";
 
 import { CheckoutItemContainer, ImageContainer, BaseSpan, Quantity, Arrow, Value, RemoveButton } from "./checkoutItem.styles";
 
@@ -19,11 +17,9 @@ const CheckoutItem: FC<CheckoutItemProps> = memo(({ cartItem }) => {
 
 	const dispatch = useAppDispatch();
 
-	const cartItems = useSelector(selectCartItems);
-
-	const clearItemHandler = () => dispatch(clearItemFromCart(cartItems, cartItem));
-	const addItemHandler = () => dispatch(addItemToCart(cartItems, cartItem));
-	const removeItemHandler = () => dispatch(removeItemFromCart(cartItems, cartItem));
+	const clearItemHandler = () => dispatch(clearItemFromCart(cartItem));
+	const addItemHandler = () => dispatch(addItemToCart(cartItem));
+	const removeItemHandler = () => dispatch(removeItemFromCart(cartItem));
 
 	return (
 		<CheckoutItemContainer>
