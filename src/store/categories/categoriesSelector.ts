@@ -1,10 +1,10 @@
-import { createSelector } from "reselect";
+import { createSelector } from "@reduxjs/toolkit";
 
-import { CategoriesState } from "./category.reducer";
+import { CategoriesState } from "./categoriesSlice";
 
 import { RootState } from "../store";
 
-import { CategoryMap } from "./category.types";
+import { CategoryMap } from "./categoriesTypes";
 
 const selectCategoryReducer = (state: RootState): CategoriesState => state.categories;
 

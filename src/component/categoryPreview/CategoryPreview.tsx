@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import ProductCard from "../ProductCard";
 
-import { CategoryItem } from "../../store/categories/category.types";
+import { CategoryItem } from "../../store/categories/categoriesTypes";
 
 import { CategoryPreviewContainer, Title, Preview } from "./categoryPreview.styles";
 

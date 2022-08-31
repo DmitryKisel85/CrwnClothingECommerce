@@ -1,6 +1,6 @@
 import { all, call } from "typed-redux-saga/macro";
 
-import { categoriesSaga } from "./categories/category.saga";
+import { categoriesSaga } from "./categories/categoriesSaga";
 import { userSagas } from "./user/user.saga";
 
 export function* rootSaga() {

@@ -7,8 +7,7 @@ import createSagaMiddleware from "redux-saga";
 import { rootSaga } from "./rootSaga";
 
 import { userReducer } from "./user/user.reducer";
-import { categoriesReducer } from "./categories/category.reducer";
-// import { cartReducer } from "./cart/cart.reducer";
+import categoriesReducer from "./categories/categoriesSlice";
 import cartReducer from "./cart/cartSlice";
 
 export type RootState = ReturnType<typeof rootReducer>;

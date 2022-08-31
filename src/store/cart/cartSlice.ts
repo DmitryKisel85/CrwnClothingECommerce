@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { CartItem } from "./cartTypes";
-import { CategoryItem } from "../categories/category.types";
+import { CategoryItem } from "../categories/categoriesTypes";
 
 export type CartState = {
 	readonly cartItems: CartItem[];

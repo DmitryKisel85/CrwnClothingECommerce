@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useSelector } from "react-redux";
 
-import { selectCategoriesMap, selectCategoriesIsLoading } from "../../store/categories/category.selector";
+import { selectCategoriesMap, selectCategoriesIsLoading } from "../../store/categories/categoriesSelector";
 
 import CategoryPreview from "../../component/CategoryPreview";
 import Spinner from "../../component/Spinner";

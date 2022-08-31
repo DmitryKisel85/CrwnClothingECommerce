@@ -5,7 +5,7 @@ import { useAppDispatch } from "../../store/store";
 import CategoriesPreview from "../CategoriesPreview";
 import Category from "../Category";
 
-import { fetchCategoriesStart } from "../../store/categories/category.action";
+import { fetchCategoriesStart } from "../../store/categories/categoriesSlice";
 
 const Shop: FC = () => {
 	const dispatch = useAppDispatch();

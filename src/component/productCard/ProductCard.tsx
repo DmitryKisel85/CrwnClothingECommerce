@@ -7,7 +7,7 @@ import { addItemToCart } from "../../store/cart/cartSlice";
 import Button from "../Button";
 import { BUTTON_TYPES_CLASSES } from "../Button/Button";
 
-import { CategoryItem } from "../../store/categories/category.types";
+import { CategoryItem } from "../../store/categories/categoriesTypes";
 
 import { ProductCardContainer, Footer, Name, Price } from "./productCard.styles";
 
