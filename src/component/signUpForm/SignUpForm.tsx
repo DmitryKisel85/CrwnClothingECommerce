@@ -7,7 +7,7 @@ import { useAppDispatch } from "../../store/store";
 import FormInput from "../FormInput";
 import Button from "../Button";
 
-import { signUpStart } from "../../store/user/user.action";
+import { signUpStart } from "../../store/user/userAction";
 
 import { SignUpContainer } from "./signUpForm.styles";
 
@@ -44,7 +44,7 @@ const SignUpForm: FC = () => {
 				alert("Cannot create user, email already in use");
 			}
 
-			console.log("user creation encountered an error", error);
+			console.log("User creation encountered an error", error);
 		}
 	};
 

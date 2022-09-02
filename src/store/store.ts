@@ -6,7 +6,7 @@ import createSagaMiddleware from "redux-saga";
 
 import { rootSaga } from "./rootSaga";
 
-import { userReducer } from "./user/user.reducer";
+import userReducer from "./user/userSlice";
 import categoriesReducer from "./categories/categoriesSlice";
 import cartReducer from "./cart/cartSlice";
 

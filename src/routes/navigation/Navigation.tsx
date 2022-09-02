@@ -9,9 +9,9 @@ import CartDropdown from "../../component/CartDropdown";
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 
 import { selectIsCartOpen } from "../../store/cart/cartSelector";
-import { selectCurrentUser } from "../../store/user/user.selector";
+import { selectCurrentUser } from "../../store/user/userSelector";
 
-import { signOutStart } from "../../store/user/user.action";
+import { signOutStart } from "../../store/user/userAction";
 
 import { NavigationContainer, NavLinks, NavLink, LogoContainer } from "./navigation.styles";
 

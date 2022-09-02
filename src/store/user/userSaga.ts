@@ -1,8 +1,9 @@
 import { takeLatest, put, all, call } from "typed-redux-saga/macro";
 
-import { USER_ACTION_TYPES } from "./user.types";
+import { USER_ACTION_TYPES } from "./userTypes";
 
-import { signInSuccess, signInFailed, signUpSuccess, signUpFailed, signOutSuccess, signOutFailed, EmailSignInStart, SignUpStart, SignUpSuccess } from "./user.action";
+import { signUpSuccess, EmailSignInStart, SignUpStart, SignUpSuccess } from "./userAction";
+import { signInSuccess, signInFailed, signUpFailed, signOutFailed, signOutSuccess } from "./userSlice";
 
 import { getCurrentUser, createUserDocumentFromAuth, signInWithGooglePopup, signInAuthUserWithEmailAndPassword, createAuthUserWithEmailAndPassword, signOutUser, AdditionalInformation } from "../../utils/firebase/firebase";
 
@@ -48,6 +49,7 @@ export function* signUp({ payload: { email, password, displayName } }: SignUpSta
 
 		if (userCredential) {
 			const { user } = userCredential;
+
 			yield* put(signUpSuccess(user, { displayName }));
 		}
 	} catch (error) {

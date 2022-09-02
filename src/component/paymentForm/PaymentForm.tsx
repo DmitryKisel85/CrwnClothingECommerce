@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
 import { selectCartTotal } from "../../store/cart/cartSelector";
-import { selectCurrentUser } from "../../store/user/user.selector";
+import { selectCurrentUser } from "../../store/user/userSelector";
 
 import { BUTTON_TYPES_CLASSES } from "../Button/Button";
 

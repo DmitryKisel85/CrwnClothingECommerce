@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { UserData } from "../../utils/firebase/firebase";
 
@@ -18,8 +18,26 @@ const userSlice = createSlice({
 	name: "userReducer",
 	initialState,
 	reducers: {
-		signInUser: (state, action) => {
+		signInSuccess: (state, action: PayloadAction<UserData & { id: string }>) => {
 			state.currentUser = action.payload;
+		},
+		signInFailed: (state, action: PayloadAction<Error>) => {
+			state.error = action.payload;
+		},
+		signUpFailed: (state, action: PayloadAction<Error>) => {
+			state.error = action.payload;
+		},
+		signOutSuccess: (state) => {
+			state.currentUser = null;
+		},
+		signOutFailed: (state, action: PayloadAction<Error>) => {
+			state.error = action.payload;
 		},
 	},
 });
+
+const { actions, reducer } = userSlice;
+
+export const { signInSuccess, signInFailed, signUpFailed, signOutFailed, signOutSuccess } = actions;
+
+export default reducer;

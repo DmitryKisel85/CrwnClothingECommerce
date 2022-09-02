@@ -5,7 +5,7 @@ import { useAppDispatch } from "./store/store";
 
 import Spinner from "./component/Spinner";
 
-import { checkUserSession } from "./store/user/user.action";
+import { checkUserSession } from "./store/user/userAction";
 
 import { GlobalStyle } from "./global.styles";
 

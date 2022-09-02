@@ -7,7 +7,7 @@ import FormInput from "../FormInput";
 import Button from "../Button";
 import { BUTTON_TYPES_CLASSES } from "../Button/Button";
 
-import { googleSignInStart, emailSignInStart } from "../../store/user/user.action";
+import { googleSignInStart, emailSignInStart } from "../../store/user/userAction";
 
 import { SignInContainer, ButtonsContainer } from "./signInForm.styles";
 
@@ -63,7 +63,7 @@ const SignInForm: FC = () => {
 		<SignInContainer>
 			<h2>Already have an account?</h2>
 			<span>Sign in with your email and password</span>
-			<form onSubmit={(e) => handleSubmit}>
+			<form onSubmit={(e) => handleSubmit(e)}>
 				<FormInput label='Email' type='email' required onChange={handleChange} name='email' value={email} />
 				<FormInput label='Password' type='password' required onChange={handleChange} name='password' value={password} />
 				<ButtonsContainer>
