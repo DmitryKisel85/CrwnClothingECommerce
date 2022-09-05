@@ -15,4 +15,3 @@ const Authentication: FC = () => {
 };
 
 export default Authentication;
-//
