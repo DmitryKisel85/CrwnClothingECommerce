@@ -3,7 +3,7 @@ import { FC } from "react";
 import SignUpForm from "../../component/SignUpForm";
 import SignInForm from "../../component/SignInForm";
 
-import { AuthenticationContainer } from "./authentication.styles";
+import { AuthenticationContainer } from "./authentication.styles.jsx";
 
 const Authentication: FC = () => {
 	return (
