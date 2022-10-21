@@ -4,21 +4,18 @@ import { getCategoriesAndDocuments } from "../../utils/firebase/firebase";
 
 import { fetchCategoriesSuccess, fetchCategoriesFailed } from "./categoriesSlice";
 
-import { CATEGORIES_ACTION_TYPES } from "./categoriesTypes";
+import { fetchCategoriesStart } from "./categoriesSlice";
+import { Category } from "./categoriesTypes";
 
 export function* fetchCategoriesAsync() {
-	try {
-		const categoriesArray = yield* call(getCategoriesAndDocuments);
-		yield put(fetchCategoriesSuccess(categoriesArray));
-	} catch (error) {
-		yield put(fetchCategoriesFailed(error as Error));
-	}
-}
-
-export function* onFetchCategories() {
-	yield takeLatest(CATEGORIES_ACTION_TYPES.FETCH_CATEGORIES_START, fetchCategoriesAsync);
+    try {
+        const categoriesArray: Category[] = yield call(getCategoriesAndDocuments);
+        yield put(fetchCategoriesSuccess(categoriesArray));
+    } catch (error) {
+        yield put(fetchCategoriesFailed(error as Error));
+    }
 }
 
 export function* categoriesSaga() {
-	yield all([call(onFetchCategories)]);
+    yield all([takeLatest(fetchCategoriesStart.type, fetchCategoriesAsync)]);
 }
